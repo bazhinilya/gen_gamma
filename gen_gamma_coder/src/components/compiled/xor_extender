@@ -1,0 +1,77 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib64/ivl/system.vpi";
+:vpi_module "/usr/lib64/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib64/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib64/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib64/ivl/va_math.vpi";
+:vpi_module "/usr/lib64/ivl/v2009.vpi";
+S_0x562f98bca6a0 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x562f98bca830 .scope module, "xor_extender" "xor_extender" 3 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "lst_rand";
+    .port_info 1 /OUTPUT 8 "out";
+P_0x562f98bca9c0 .param/l "SIZE" 0 3 2, +C4<00000000000000000000000000000100>;
+L_0x7f7da7b99018 .functor BUFT 1, C4<x>, C4<0>, C4<0>, C4<0>;
+L_0x562f98c1ae80 .functor XOR 1, L_0x562f98c1ad80, L_0x7f7da7b99018, C4<0>, C4<0>;
+L_0x562f98c1b100 .functor XOR 1, L_0x562f98c1af70, L_0x562f98c1b060, C4<0>, C4<0>;
+L_0x562f98c1b380 .functor XOR 1, L_0x562f98c1b210, L_0x562f98c1b2e0, C4<0>, C4<0>;
+L_0x7f7da7b99060 .functor BUFT 1, C4<x>, C4<0>, C4<0>, C4<0>;
+L_0x562f98c1b550 .functor XOR 1, L_0x562f98c1b470, L_0x7f7da7b99060, C4<0>, C4<0>;
+L_0x562f98c1b930 .functor XOR 1, L_0x562f98c1b690, L_0x562f98c1b730, C4<0>, C4<0>;
+L_0x562f98c1bc10 .functor XOR 1, L_0x562f98c1ba70, L_0x562f98c1bb10, C4<0>, C4<0>;
+L_0x7f7da7b990a8 .functor BUFT 1, C4<x>, C4<0>, C4<0>, C4<0>;
+L_0x562f98c1bde0 .functor XOR 1, L_0x562f98c1bd40, L_0x7f7da7b990a8, C4<0>, C4<0>;
+L_0x562f98c1c0d0 .functor XOR 1, L_0x562f98c1bf20, L_0x562f98c1c030, C4<0>, C4<0>;
+v0x562f98bf6550_0 .net *"_ivl_1", 0 0, L_0x562f98c1ad80;  1 drivers
+v0x562f98c19600_0 .net *"_ivl_10", 0 0, L_0x562f98c1b100;  1 drivers
+v0x562f98c196e0_0 .net *"_ivl_13", 0 0, L_0x562f98c1b210;  1 drivers
+v0x562f98c197a0_0 .net *"_ivl_15", 0 0, L_0x562f98c1b2e0;  1 drivers
+v0x562f98c19880_0 .net *"_ivl_16", 0 0, L_0x562f98c1b380;  1 drivers
+v0x562f98c199b0_0 .net *"_ivl_19", 0 0, L_0x562f98c1b470;  1 drivers
+v0x562f98c19a90_0 .net *"_ivl_2", 0 0, L_0x7f7da7b99018;  1 drivers
+v0x562f98c19b70_0 .net *"_ivl_20", 0 0, L_0x7f7da7b99060;  1 drivers
+v0x562f98c19c50_0 .net *"_ivl_22", 0 0, L_0x562f98c1b550;  1 drivers
+v0x562f98c19d30_0 .net *"_ivl_25", 0 0, L_0x562f98c1b690;  1 drivers
+v0x562f98c19e10_0 .net *"_ivl_27", 0 0, L_0x562f98c1b730;  1 drivers
+v0x562f98c19ef0_0 .net *"_ivl_28", 0 0, L_0x562f98c1b930;  1 drivers
+v0x562f98c19fd0_0 .net *"_ivl_31", 0 0, L_0x562f98c1ba70;  1 drivers
+v0x562f98c1a0b0_0 .net *"_ivl_33", 0 0, L_0x562f98c1bb10;  1 drivers
+v0x562f98c1a190_0 .net *"_ivl_34", 0 0, L_0x562f98c1bc10;  1 drivers
+v0x562f98c1a270_0 .net *"_ivl_37", 0 0, L_0x562f98c1bd40;  1 drivers
+v0x562f98c1a350_0 .net *"_ivl_38", 0 0, L_0x7f7da7b990a8;  1 drivers
+v0x562f98c1a540_0 .net *"_ivl_4", 0 0, L_0x562f98c1ae80;  1 drivers
+v0x562f98c1a620_0 .net *"_ivl_40", 0 0, L_0x562f98c1bde0;  1 drivers
+v0x562f98c1a700_0 .net *"_ivl_43", 0 0, L_0x562f98c1bf20;  1 drivers
+v0x562f98c1a7e0_0 .net *"_ivl_45", 0 0, L_0x562f98c1c030;  1 drivers
+v0x562f98c1a8c0_0 .net *"_ivl_46", 0 0, L_0x562f98c1c0d0;  1 drivers
+v0x562f98c1a9a0_0 .net *"_ivl_7", 0 0, L_0x562f98c1af70;  1 drivers
+v0x562f98c1aa80_0 .net *"_ivl_9", 0 0, L_0x562f98c1b060;  1 drivers
+o0x7f7da7be2498 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v0x562f98c1ab60_0 .net "lst_rand", 3 0, o0x7f7da7be2498;  0 drivers
+v0x562f98c1ac40_0 .net "out", 7 0, L_0x562f98c1c260;  1 drivers
+L_0x562f98c1ad80 .part o0x7f7da7be2498, 0, 1;
+L_0x562f98c1af70 .part o0x7f7da7be2498, 1, 1;
+L_0x562f98c1b060 .part o0x7f7da7be2498, 3, 1;
+L_0x562f98c1b210 .part o0x7f7da7be2498, 2, 1;
+L_0x562f98c1b2e0 .part o0x7f7da7be2498, 2, 1;
+L_0x562f98c1b470 .part o0x7f7da7be2498, 0, 1;
+L_0x562f98c1b690 .part o0x7f7da7be2498, 1, 1;
+L_0x562f98c1b730 .part o0x7f7da7be2498, 3, 1;
+L_0x562f98c1ba70 .part o0x7f7da7be2498, 2, 1;
+L_0x562f98c1bb10 .part o0x7f7da7be2498, 2, 1;
+L_0x562f98c1bd40 .part o0x7f7da7be2498, 0, 1;
+L_0x562f98c1bf20 .part o0x7f7da7be2498, 1, 1;
+L_0x562f98c1c030 .part o0x7f7da7be2498, 3, 1;
+LS_0x562f98c1c260_0_0 .concat [ 1 1 1 1], L_0x562f98c1c0d0, L_0x562f98c1bde0, L_0x562f98c1bc10, L_0x562f98c1b930;
+LS_0x562f98c1c260_0_4 .concat [ 1 1 1 1], L_0x562f98c1b550, L_0x562f98c1b380, L_0x562f98c1b100, L_0x562f98c1ae80;
+L_0x562f98c1c260 .concat [ 4 4 0 0], LS_0x562f98c1c260_0_0, LS_0x562f98c1c260_0_4;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "xor_extender.sv";
