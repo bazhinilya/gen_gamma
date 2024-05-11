@@ -1,7 +1,7 @@
 module inverter #(
 	parameter DELAY = 5
 ) (
-	input logic in,
+	input  logic in,
 	output logic out
 );
 

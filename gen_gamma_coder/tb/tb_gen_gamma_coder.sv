@@ -13,7 +13,7 @@ localparam SIZE = 8;
 logic clk, rst_n, set0, set1;
 logic [SIZE - 1 : 0] id;  
 logic [SIZE - 1 : 0] nk;
-logic [SIZE : 0] md;
+logic [SIZE : 0]     md;
 
 
 gen_gamma_coder #(SIZE) tb (

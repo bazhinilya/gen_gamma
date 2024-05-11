@@ -1,5 +1,5 @@
 module xor_extender (
-    input logic r0, r1, r2, r3,
+    input  logic r0, r1, r2, r3,
     output logic q0, q1, q2, q3, q4, q5, q6, q7
 );
     
