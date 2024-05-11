@@ -8,7 +8,7 @@ module tb_gen_gamma_decoder;
 
 localparam SIZE = 8;
 logic clk, rst_n, set0, set1;
-logic [SIZE : 0] md;
+logic [SIZE : 0]     md;
 logic [SIZE - 1 : 0] nk;
 logic [SIZE - 1 : 0] od;  
 
