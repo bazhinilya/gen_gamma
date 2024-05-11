@@ -1,14 +1,18 @@
 module register #(
     parameter SIZE = 8
 ) (
-    input logic clk, res_n,
-    input logic [SIZE - 1 : 0]inp_data,
-    output logic [SIZE - 1 : 0]out
+    input  logic clk, rst_n, set,
+    input  logic [SIZE - 1 : 0] d,  
+    output logic [SIZE - 1 : 0] q
 );
 
-always_ff @( posedge clk or negedge res_n ) begin
-    if (!res_n) out <= '0;
-    else out = inp_data;
+always_ff @( posedge clk or negedge rst_n ) begin
+    if (!rst_n) 
+        q <= '0;
+    else if (set) 
+        q <= d;
+    else 
+        q <= q;
 end
 
 endmodule
