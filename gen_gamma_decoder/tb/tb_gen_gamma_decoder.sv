@@ -2,7 +2,7 @@
 `include "../src/components/register.sv"
 `include "../src/components/subtractor.sv"
 `include "../src/components/full_sum.sv"
-`timescale 1ps/1ps
+`timescale 1ns/1ps
 
 module tb_gen_gamma_decoder;
 
@@ -22,24 +22,25 @@ gen_gamma_decoder #(SIZE) tb (
 
 initial begin
     clk = 0;
-    rst_n = 1;
+    rst_n = 0;
     md = $random;
     nk = $random;
     set0 = 0;
     set1 = 0;
-    #10 set0 = 1;
-    #10 set0 = 0; 
-    #20 set1 = 1;
+#10 rst_n = 1;
+#30 set0 = 1;
+#10 set1 = 1; 
+#50 rst_n = 0;
 end
 
 localparam CLK_PERIOD = 10;
 always #(CLK_PERIOD / 2) clk = ~clk;
-always #(CLK_PERIOD * 4) rst_n = ~rst_n;
 
 initial begin
     $dumpfile("tb_gen_gamma_decoder.vcd");
+    $dumpvars(0, tb_gen_gamma_decoder);
     $monitor("time = %t; clk = %b, rst_n = %b, md = %d, nk = %d, od = %d", $time, clk, rst_n, md, nk, od);
-    #150 $finish(2);
+    #500 $finish(2);
 end
 
 endmodule

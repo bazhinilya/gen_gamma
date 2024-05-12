@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module full_sum (
     input  logic a, b, p0,
     output logic q,
