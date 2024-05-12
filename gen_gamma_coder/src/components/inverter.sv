@@ -1,10 +1,12 @@
+`timescale 1ns/1ps
+
 module inverter #(
-	parameter DELAY = 5
+	parameter DELAY = 10
 ) (
 	input  logic in,
 	output logic out
 );
 
-assign #DELAY out = ~in;
+assign #2 out = ~in;
 
 endmodule 
